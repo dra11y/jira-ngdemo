@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/jira/plugins/servlet/demo/" />
+    <meta name="decorator" content="atl.general" />
+    <meta charset="UTF-8">
+    <title>Angular Demo</title>
+    $webResourceManager.requireResourcesForContext("com.grushka.ngdemo.client-resources")
+</head>
+<body>
+
+<app-root></app-root>
+
+</body>
+</html>
