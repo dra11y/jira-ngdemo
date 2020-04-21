@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
+    <param name="plugin-icon">images/pluginIcon.png</param>  
+    <param name="plugin-logo">images/pluginLogo.png</param> 
+  </plugin-info>  
+  <!-- add our i18n resource -->  
+  <resource type="i18n" name="i18n" location="ngdemo"/>  
+  <!-- add our web resources -->  
+  <web-resource key="ngdemo-resources" name="ngdemo Web Resources"> 
+    <dependency>com.atlassian.auiplugin:ajs</dependency>  
+    <resource type="download" name="ngdemo.css" location="/css/ngdemo.css"/>  
+    <resource type="download" name="ngdemo.js" location="/js/ngdemo.js"/>  
+    <resource type="download" name="images/" location="/images"/>  
+    <context>ngdemo</context> 
+  </web-resource>  
+  <servlet name="Demo Servlet" i18n-name-key="demo-servlet.name" key="demo-servlet" class="com.grushka.demo.servlet.DemoServlet"> 
+    <description key="demo-servlet.description">The Demo Servlet Plugin</description>  
+    <url-pattern>/demo*</url-pattern>
+  </servlet>
+</atlassian-plugin>
