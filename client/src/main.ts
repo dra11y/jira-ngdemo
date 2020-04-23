@@ -20,6 +20,7 @@ let bootstrap = function() {
     .catch(err => console.error(err));
 }
 
+// AJS = Atlassian JavaScript
 if (typeof AJS !== 'undefined') {
   AJS.toInit(function() {
     bootstrap();

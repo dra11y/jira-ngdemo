@@ -27,11 +27,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.less"
             ],
             "scripts": []
           },
           "configurations": {
+            "cli": {
+              "scripts": [
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/@atlassian/aui/dist/aui/aui-prototyping.js"
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/styles.less",
+                  "with": "src/styles.cli.less"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -66,7 +78,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular.io-example:build"
+            "browserTarget": "angular.io-example:build:cli"
           },
           "configurations": {
             "production": {
@@ -92,7 +104,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.less"
             ],
             "scripts": []
           }

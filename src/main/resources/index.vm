@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="assetsUrl" content="$webResourceManager.getStaticPluginResource('com.grushka.demo.ngdemo:client-resources', 'assets')" />
     <base href="/jira/plugins/servlet/demo/" />
     <meta name="decorator" content="atl.general" />
     <meta charset="UTF-8">
     <title>Angular Demo</title>
+    $webResourceManager.requireResourcesForContext("com.atlassian.auiplugin:aui-sidebar")
     $webResourceManager.requireResourcesForContext("com.grushka.ngdemo.client-resources")
 </head>
 <body>

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AssetService } from './asset.service';
+
+declare var AJS: any;
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+
+  constructor(private assetService: AssetService) {}
+
+  ngOnInit() {
+    AJS.sidebar('.aui-sidebar');
+  }
 }

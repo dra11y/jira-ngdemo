@@ -1,7 +1,140 @@
 <h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+
+<section id="content" role="main">
+  <!-- AUI Sidebar -->
+  <div class="aui-sidebar">
+    <div class="aui-sidebar-wrapper">
+      <div class="aui-sidebar-body">
+
+        <!-- AUI Page Header -->
+        <header class="aui-page-header">
+          <div class="aui-page-header-inner">
+            <div class="aui-page-header-image">
+                            <span class="aui-avatar aui-avatar-project aui-avatar-large">
+                                <span class="aui-avatar-inner">
+                                    <img src="{{ assetService.url('Ying-Yang.png') }}" alt="" role="presentation" />
+                                </span>
+                            </span>
+
+            </div>
+            <div class="aui-page-header-main">
+              <h1>
+                AUI Sidebar
+              </h1>
+              <ol class="aui-nav aui-nav-breadcrumbs">
+                <li>
+                  <a href="#"><span class="aui-nav-item-label">This is a really really long title for whatever this is</span></a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </header>
+
+        <!-- AUI Navigation -->
+
+        <nav class="aui-navgroup aui-navgroup-vertical">
+          <div class="aui-navgroup-inner">
+
+            <!-- A Sidebar group will collapse into a single trigger icon when sidebar is collapsed -->
+            <!-- The 'actions' sidebar group type will be styled differently from normal groups when sidebar is collapsed -->
+            <div class="aui-sidebar-group aui-sidebar-group-actions">
+
+              <!-- the AUI Nav heading will be used as the tooltip text -->
+              <div class="aui-nav-heading" title="Actions">
+                <strong>Actions</strong>
+              </div>
+
+              <!-- If a sidebar group does not have a nav heading, then the aui-nav's title attribute will be used
+                   for the tooltip for the group -->
+              <ul class="aui-nav" title="Page actions">
+                <li>
+                  <a class="aui-nav-item" routerLink="/dashboard" title="Dashboard">Dashboard</a>
+                </li>
+                <li>
+                  <a class="aui-nav-item" routerLink="/heroes" title="Heroes">Heroes</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- A "Tier One" Sidebar group will display all of its nav items, but all nav items MUST have an AUI Icon
+                 which will be used when the sidebar is collapsed -->
+            <div class="aui-sidebar-group aui-sidebar-group-tier-one">
+
+              <!-- in a "Tier One" Sidebar group, AUI Nav heading is ignored, and each nav item's label will be used
+                   as the tooltip text instead -->
+              <div class="aui-nav-heading" title="Stuff">
+                <strong>Simple Nav</strong>
+              </div>
+
+              <ul class="aui-nav">
+                <li class="aui-nav-selected">
+                  <a class="aui-nav-item" href="#">
+
+                    <!-- "Tier One" navigation items MUST have an AUI Icon before the text label -->
+                    <span class="aui-icon aui-icon-small aui-iconfont-info"></span>
+
+
+                    <!-- "Tier One" Nav items labels also need an extra SPAN around them with the aui-nav-item-label class -->
+                    <span class="aui-nav-item-label">Summary</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="aui-nav-item" href="#" title="This is a really really long title for whatever this is">
+                    <span class="aui-icon aui-icon-small aui-iconfont-details"></span>
+                    <span class="aui-nav-item-label">Issues</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="aui-nav-item" href="#">
+                    <span class="aui-icon aui-icon-small aui-iconfont-jira-completed-task"></span>
+                    <span class="aui-nav-item-label">Road Map</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="aui-nav-item" href="#">
+                    <span class="aui-icon aui-icon-small aui-iconfont-time"></span>
+                    <span class="aui-nav-item-label">Versions</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="aui-nav-item" href="#">
+                    <span class="aui-icon aui-icon-small aui-iconfont-devtools-submodule"></span>
+                    <span class="aui-nav-item-label">Components</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="aui-nav-item" href="#">
+                    <span class="aui-icon aui-icon-small aui-iconfont-devtools-tag"></span>
+                    <span class="aui-nav-item-label">Labels</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Sidebar footer contains the expand/collapse trigger, and optionally a button or a dropdown with configuration settings -->
+      <div class="aui-sidebar-footer">
+        <a href="https://example.com" class="aui-button aui-button-subtle aui-sidebar-settings-button" title="Settings">
+          <span class="aui-icon aui-icon-small aui-iconfont-configure"></span>
+          <span class="aui-button-label">Settings</span>
+        </a>
+        <a class="aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy" title="Collapse sidebar ( [ )">
+          <span class="aui-icon aui-icon-small"></span>
+        </a>
+      </div>
+    </div>
+  </div><!-- end AUI Sidebar -->
+
+  <div class="aui-page-panel">
+    <div class="aui-page-panel-inner">
+      <section class="aui-page-panel-content">
+        <!-- Page content goes here -->
+        <router-outlet></router-outlet>
+        <app-messages></app-messages>
+      </section>
+    </div>
+  </div>
+</section>
+

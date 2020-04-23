@@ -218,6 +218,33 @@
   resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-9.1.2.tgz#50f44f5c40d6d673119e10c225fa51a9f8804931"
   integrity sha512-VPmAkm5ysiTjatX9DFbOOtCdIT+0ISSNt2Jw48xX9moGgPHUhqaKQRZUEszWpdebNUCKorWvNfT6Zvu4e5G+nw==
 
+"@atlassian/aui@^8.5.1":
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/@atlassian/aui/-/aui-8.5.1.tgz#6c585674240621a007e59b6ca8c79f45a335738d"
+  integrity sha512-u+cWuOTpDyNod5B1SZnDCa57ruad54jQ/4vUd2VGDdp8qqiYLeuEush1deuKejvFFWSS6zd7KhkzmO/m0tm1aw==
+  dependencies:
+    "@atlassian/brand-logos" "^1.2.0"
+    "@atlassian/tipsy" "^1.3.1"
+    backbone "^1.3.3"
+    css.escape "1.5.0"
+    fancy-file-input "~2.0.4"
+    jquery-ui "^1.12.1"
+    popper.js "^1.14.5"
+    skatejs "0.13.17"
+    skatejs-template-html "0.0.0"
+    trim-extra-html-whitespace "1.3.0"
+    underscore "^1.9.1"
+
+"@atlassian/brand-logos@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@atlassian/brand-logos/-/brand-logos-1.2.0.tgz#2110dba6ca49acaf1c51b15420a4567b01b4b4bd"
+  integrity sha512-rtTIQqvZO6Tr7+oNWvtED7xMpuE1NQoNF5vA1d+8ym3wTANvgbKxyHK2pj5jTW3dMoEE2Qac8YMebtN46B/mQg==
+
+"@atlassian/tipsy@^1.3.1":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@atlassian/tipsy/-/tipsy-1.3.2.tgz#ab759d461670d712425b2dac7573b79575a10502"
+  integrity sha512-H7qWMs66bztELt2QpOCLYDU9ZM3VZfE0knbRHHLBukH7v9dMkIS5ZwqcGREjWnVt0KNETaBeXxj0FD88TEOGVw==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -1599,6 +1626,13 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
+backbone@^1.3.3:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/backbone/-/backbone-1.4.0.tgz#54db4de9df7c3811c3f032f34749a4cd27f3bd12"
+  integrity sha512-RLmDrRXkVdouTg38jcgHhyQ/2zjg7a8E6sz2zxfz21Hh17xDJYUHBZimVIt5fUyS8vbfpeSmTL3gUjTEvUV3qQ==
+  dependencies:
+    underscore ">=1.8.3"
+
 backo2@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
@@ -2601,6 +2635,11 @@ css-what@^3.2.1:
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-3.2.1.tgz#f4a8f12421064621b456755e34a03a2c22df5da1"
   integrity sha512-WwOrosiQTvyms+Ti5ZC5vGEK0Vod3FTt1ca+payZqvKuGJF+dq7bG63DstxtN0dpm6FxY27a/zS3Wten+gEtGw==
 
+css.escape@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/css.escape/-/css.escape-1.5.0.tgz#95984d7887ce4ca90684e813966f42d1ef87ecea"
+  integrity sha1-lZhNeIfOTKkGhOgTlm9C0e+H7Oo=
+
 css@^2.0.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/css/-/css-2.2.4.tgz#c646755c73971f2bba6a601e2cf2fd71b1298929"
@@ -3360,6 +3399,11 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+
+fancy-file-input@~2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/fancy-file-input/-/fancy-file-input-2.0.4.tgz#698c216482e07649a827681c4db3054fddc9a32b"
+  integrity sha512-l+J0WwDl4nM/zMJ/C8qleYnXMUJKsLng7c5uWH/miAiHoTvPDtEoLW1tmVO6Cy2O8i/1VfA+2YOwg/Q3+kgO6w==
 
 fast-deep-equal@^3.1.1:
   version "3.1.1"
@@ -4646,6 +4690,16 @@ jest-worker@^25.1.0:
   dependencies:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
+
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
+  integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
+
+jquery@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.0.tgz#9980b97d9e4194611c36530e7dc46a58d7340fc9"
+  integrity sha512-Xb7SVYMvygPxbFMpTFQiHh1J7HClEaThguL15N/Gg37Lri/qKyhRGZYzHRyLH8Stq3Aow0LsHO2O2ci86fCrNQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -6094,6 +6148,11 @@ pkg-up@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+popper.js@^1.14.5:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
+
 portfinder@^1.0.25:
   version "1.0.25"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.25.tgz#254fd337ffba869f4b9d37edc298059cb4d35eca"
@@ -7219,6 +7278,16 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
+skatejs-template-html@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/skatejs-template-html/-/skatejs-template-html-0.0.0.tgz#e990c1a7d4b58b7305ffcc3338939bf402023df7"
+  integrity sha1-6ZDBp9S1i3MF/8wzOJOb9AICPfc=
+
+skatejs@0.13.17:
+  version "0.13.17"
+  resolved "https://registry.yarnpkg.com/skatejs/-/skatejs-0.13.17.tgz#7a21fbb3434da45e52b47b61647168ee9e778071"
+  integrity sha1-eiH7s0NNpF5StHthZHFo7p53gHE=
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -7965,6 +8034,11 @@ tree-kill@1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
+trim-extra-html-whitespace@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/trim-extra-html-whitespace/-/trim-extra-html-whitespace-1.3.0.tgz#b47efb0d1a5f2a56a85cc45cea525651e93404cf"
+  integrity sha1-tH77DRpfKlaoXMRc6lJWUek0BM8=
+
 ts-node@^8.5.2:
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.8.2.tgz#0b39e690bee39ea5111513a9d2bcdc0bc121755f"
@@ -8067,6 +8141,11 @@ ultron@~1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
   integrity sha512-UIEXBNeYmKptWH6z8ZnqTeS8fV74zG0/eRU9VGkpzz+LIJNs8W/zM/L+7ctCkRrgbNnnR0xxw4bKOr0cW0N0Og==
+
+underscore@>=1.8.3, underscore@^1.9.1:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.10.2.tgz#73d6aa3668f3188e4adb0f1943bd12cfd7efaaaf"
+  integrity sha512-N4P+Q/BuyuEKFJ43B9gYuOj4TQUHXX+j2FqguVOpjkssLUUrnJofCcBccJSCoeturDoZU6GorDTHSvUDlSQbTg==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
