@@ -12,7 +12,80 @@
     <name>ngdemo</name>
     <description>This is the com.grushka.demo:ngdemo plugin for Atlassian JIRA.</description>
     <packaging>atlassian-plugin</packaging>
+
+
+    <profiles>
+        <profile>
+            <id>build-skip-client</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>dev</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.eirslett</groupId>
+                        <artifactId>frontend-maven-plugin</artifactId>
+                        <version>1.9.1</version>
+
+                        <configuration>
+                            <workingDirectory>client</workingDirectory>
+                        </configuration>
+
+                        <executions>
+                            <execution>
+                                <id>install node and yarn</id>
+                                <goals>
+                                    <goal>install-node-and-yarn</goal>
+                                </goals>
+                                <configuration>
+                                    <nodeVersion>v13.10.1</nodeVersion>
+                                    <yarnVersion>v1.21.1</yarnVersion>
+                                </configuration>
+                                <phase>none</phase>
+                            </execution>
+
+                            <execution>
+                                <id>yarn build</id>
+                                <goals>
+                                    <goal>yarn</goal>
+                                </goals>
+                                <configuration>
+                                    <arguments>build</arguments>
+                                </configuration>
+                                <phase>none</phase>
+                            </execution>
+
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>build-with-client</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>env</name>
+                    <value>dev</value>
+                </property>
+            </activation>
+        </profile>
+    </profiles>
+
+
+
+
     <dependencies>
+        <dependency>
+            <groupId>com.atlassian.activeobjects</groupId>
+            <artifactId>activeobjects-core</artifactId>
+            <version>3.2.3</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.atlassian.templaterenderer</groupId>
             <artifactId>atlassian-template-renderer-api</artifactId>
@@ -111,6 +184,30 @@
             <version>1.8.5</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.plugins.rest</groupId>
+            <artifactId>atlassian-rest-common</artifactId>
+            <version>1.0.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.sal</groupId>
+            <artifactId>sal-api</artifactId>
+            <version>2.6.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.wink</groupId>
+            <artifactId>wink-client</artifactId>
+            <version>1.4</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -118,11 +215,9 @@
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
                 <version>1.9.1</version>
-
                 <configuration>
                     <workingDirectory>client</workingDirectory>
                 </configuration>
-
                 <executions>
                     <execution>
                         <id>install node and yarn</id>
@@ -134,7 +229,6 @@
                             <yarnVersion>v1.21.1</yarnVersion>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>yarn build</id>
                         <goals>
@@ -145,10 +239,8 @@
                             <arguments>build</arguments>
                         </configuration>
                     </execution>
-
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>com.atlassian.maven.plugins</groupId>
                 <artifactId>jira-maven-plugin</artifactId>

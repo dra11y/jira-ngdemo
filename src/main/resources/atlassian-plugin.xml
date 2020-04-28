@@ -20,6 +20,13 @@
   </web-resource>  
   <servlet name="Demo Servlet" i18n-name-key="demo-servlet.name" key="demo-servlet" class="com.grushka.demo.servlet.DemoServlet"> 
     <description key="demo-servlet.description">The Demo Servlet Plugin</description>  
-    <url-pattern>/demo*</url-pattern>
-  </servlet>
+    <url-pattern>/demo*</url-pattern> 
+  </servlet>  
+  <rest name="Heroes Resource" i18n-name-key="heroes-resource.name" key="heroes-resource" path="/ngdemo" version="1.0"> 
+    <description key="heroes-resource.description">The Heroes Resource Plugin</description> 
+  </rest>
+  <ao key="ao-module">
+    <description>The ActiveObjects module</description>
+    <entity>com.grushka.demo.entity.Hero</entity>
+  </ao>
 </atlassian-plugin>

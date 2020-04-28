@@ -1,0 +1,7 @@
+{
+  "/jira": {
+    "target": "http://localhost:2990",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
